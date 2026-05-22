@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vértex Legal · Firma boutique en derecho tributario, ambiental y administrativo</title>
+<meta name="description" content="Vértex Legal es una firma boutique colombiana especializada en derecho tributario, ambiental y administrativo. Asesoría preventiva y defensa contenciosa frente a la administración." />
+<meta name="keywords" content="abogados, Colombia, derecho tributario, derecho ambiental, derecho administrativo, DIAN, ANLA, CPACA, Ley 1333" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --verde:#1F3B33; --verde-profundo:#0F2A23; --dorado:#B89758;
+    --dorado-claro:#D6BC85; --gris:#8C8C8C; --gris-claro:#E5E5E5;
+    --crema:#F4EFE6; --blanco:#FFFFFF;
+    --serif:'Playfair Display', Georgia, serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--verde-profundo);background:var(--crema);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;height:auto;display:block}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(244,239,230,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,59,51,.08);transition:all .3s}
+  .nav-inner{max-width:1200px;margin:0 auto;padding:1.1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{display:flex;align-items:center;gap:.6rem}
+  .nav-logo svg{height:36px;width:auto}
+  .nav-logo-text{font-family:var(--serif);font-weight:700;font-size:1.15rem;letter-spacing:2px;color:var(--verde)}
+  .nav-logo-sub{font-family:var(--sans);font-size:.65rem;letter-spacing:4px;font-weight:500;color:var(--dorado);margin-top:-2px}
+  .nav-menu{display:flex;gap:2.2rem;align-items:center}
+  .nav-menu a{font-size:.92rem;font-weight:500;letter-spacing:.5px;color:var(--verde);transition:color .2s}
+  .nav-menu a:hover{color:var(--dorado)}
+  .nav-cta{padding:.65rem 1.4rem;background:var(--verde);color:var(--crema);border-radius:50px;font-size:.85rem;font-weight:600;letter-spacing:1px;transition:all .2s}
+  .nav-cta:hover{background:var(--verde-profundo);color:var(--crema)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.5rem}
+  .nav-toggle span{display:block;width:24px;height:2px;background:var(--verde);margin:5px 0;transition:all .3s}
+  .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg, var(--verde-profundo) 0%, var(--verde) 100%);color:var(--crema);position:relative;overflow:hidden;padding:8rem 2rem 4rem}
+  .hero::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(135deg, transparent 30%, rgba(184,151,88,.08) 100%);pointer-events:none}
+  .hero-inner{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:center}
+  .hero-eyebrow{font-size:.8rem;letter-spacing:6px;font-weight:500;color:var(--dorado);margin-bottom:1.5rem;text-transform:uppercase}
+  .hero h1{font-family:var(--serif);font-size:clamp(2.5rem, 5vw, 4.3rem);font-weight:700;line-height:1.1;letter-spacing:-1px;margin-bottom:1.8rem}
+  .hero h1 em{font-style:italic;color:var(--dorado);font-weight:500}
+  .hero-sub{font-size:1.15rem;line-height:1.7;color:rgba(244,239,230,.85);margin-bottom:2.5rem;max-width:560px}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn-primary{padding:1rem 2.2rem;background:var(--dorado);color:var(--verde-profundo);border-radius:50px;font-weight:600;letter-spacing:.5px;font-size:.95rem;transition:all .25s;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:.6rem}
+  .btn-primary:hover{background:var(--dorado-claro);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+  .btn-secondary{padding:1rem 2.2rem;background:transparent;color:var(--crema);border:1.5px solid rgba(244,239,230,.4);border-radius:50px;font-weight:500;letter-spacing:.5px;font-size:.95rem;transition:all .25s}
+  .btn-secondary:hover{border-color:var(--dorado);color:var(--dorado)}
+  .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+  .hero-visual-logo{width:100%;max-width:380px;aspect-ratio:1;border:1.5px solid rgba(184,151,88,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative}
+  .hero-visual-logo::before{content:'';position:absolute;inset:-12px;border:1px solid rgba(184,151,88,.2);border-radius:50%}
+  .hero-visual-logo svg{width:55%;height:auto}
+  .areas{padding:7rem 2rem;background:var(--crema)}
+  .section-head{max-width:780px;margin:0 auto 5rem;text-align:center}
+  .section-eyebrow{font-size:.75rem;letter-spacing:6px;font-weight:500;color:var(--dorado);text-transform:uppercase;margin-bottom:1rem}
+  .section-head h2{font-family:var(--serif);font-size:clamp(2rem, 4vw, 3rem);font-weight:700;color:var(--verde);line-height:1.15;letter-spacing:-.5px;margin-bottom:1.2rem}
+  .section-head p{font-size:1.05rem;color:var(--gris);max-width:600px;margin:0 auto}
+  .areas-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+  .area-card{background:var(--blanco);padding:3rem 2.2rem;border:1px solid rgba(31,59,51,.08);border-radius:8px;transition:all .3s;position:relative;overflow:hidden}
+  .area-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--dorado);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+  .area-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(31,59,51,.1);border-color:rgba(184,151,88,.2)}
+  .area-card:hover::before{transform:scaleX(1)}
+  .area-icon{width:48px;height:48px;margin-bottom:1.5rem;color:var(--dorado)}
+  .area-card h3{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--verde);margin-bottom:1rem;letter-spacing:-.3px}
+  .area-card p{color:var(--gris);font-size:.95rem;line-height:1.7;margin-bottom:1.5rem}
+  .area-list{list-style:none;margin-bottom:1.5rem}
+  .area-list li{padding:.4rem 0;font-size:.88rem;color:var(--verde);border-bottom:1px solid rgba(31,59,51,.06);display:flex;align-items:flex-start;gap:.6rem}
+  .area-list li::before{content:'';width:5px;height:5px;background:var(--dorado);border-radius:50%;margin-top:.55rem;flex-shrink:0}
+  .area-tag{display:inline-block;padding:.3rem .8rem;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;background:rgba(184,151,88,.12);color:var(--dorado);border-radius:4px}
+  .about{padding:7rem 2rem;background:var(--verde-profundo);color:var(--crema);position:relative;overflow:hidden}
+  .about-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:center}
+  .about-visual{position:relative}
+  .about-visual-frame{aspect-ratio:4/5;background:linear-gradient(135deg, rgba(184,151,88,.15), rgba(184,151,88,.05));border:1px solid rgba(184,151,88,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;position:relative}
+  .about-visual-frame::after{content:'';position:absolute;inset:20px;border:1px solid rgba(184,151,88,.2);border-radius:4px;pointer-events:none}
+  .about-visual-frame svg{width:50%;height:auto;opacity:.85}
+  .about-content .section-eyebrow{color:var(--dorado)}
+  .about-content h2{font-family:var(--serif);font-size:clamp(2rem, 3.5vw, 2.7rem);font-weight:700;line-height:1.2;margin-bottom:1.5rem;letter-spacing:-.5px}
+  .about-content h2 em{color:var(--dorado);font-style:italic;font-weight:500}
+  .about-content p{font-size:1.05rem;line-height:1.8;color:rgba(244,239,230,.85);margin-bottom:1.2rem}
+  .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;padding-top:3rem;border-top:1px solid rgba(244,239,230,.15)}
+  .stat-num{font-family:var(--serif);font-size:2.5rem;font-weight:700;color:var(--dorado);line-height:1;margin-bottom:.5rem}
+  .stat-label{font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,230,.7);font-weight:500}
+  .enfoque{padding:7rem 2rem;background:var(--crema)}
+  .enfoque-grid{max-width:1100px;margin:4rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  .enfoque-card{padding:2.5rem;background:var(--blanco);border-radius:8px;border-left:4px solid var(--dorado)}
+  .enfoque-card h3{font-family:var(--serif);font-size:1.5rem;color:var(--verde);margin-bottom:1rem;font-weight:700}
+  .enfoque-card p{color:var(--gris);font-size:.95rem;line-height:1.7}
+  .contacto{padding:7rem 2rem;background:var(--blanco);background-image:linear-gradient(180deg, var(--crema) 0%, var(--blanco) 100%)}
+  .contacto-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+  .contacto-info h2{font-family:var(--serif);font-size:clamp(2rem, 4vw, 2.8rem);color:var(--verde);font-weight:700;line-height:1.2;margin-bottom:1.5rem;letter-spacing:-.5px}
+  .contacto-info > p{color:var(--gris);font-size:1.05rem;line-height:1.7;margin-bottom:2.5rem}
+  .contacto-item{display:flex;align-items:flex-start;gap:1rem;padding:1.3rem 0;border-bottom:1px solid rgba(31,59,51,.08)}
+  .contacto-item:last-child{border-bottom:0}
+  .contacto-icon{width:42px;height:42px;border-radius:50%;background:rgba(184,151,88,.15);color:var(--dorado);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .contacto-icon svg{width:18px;height:18px}
+  .contacto-item-label{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gris);font-weight:600;margin-bottom:.25rem}
+  .contacto-item-value{color:var(--verde);font-weight:500}
+  .contacto-form{background:var(--crema);padding:3rem;border-radius:8px;border:1px solid rgba(31,59,51,.08)}
+  .form-group{margin-bottom:1.3rem}
+  .form-group label{display:block;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--verde);font-weight:600;margin-bottom:.5rem}
+  .form-group input,.form-group textarea,.form-group select{width:100%;padding:.85rem 1rem;background:var(--blanco);border:1px solid rgba(31,59,51,.15);border-radius:6px;font-family:var(--sans);font-size:.95rem;color:var(--verde);transition:border-color .2s}
+  .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:0;border-color:var(--dorado)}
+  .form-group textarea{resize:vertical;min-height:120px}
+  .form-submit{width:100%;padding:1rem;background:var(--verde);color:var(--crema);border:0;border-radius:50px;font-family:var(--sans);font-weight:600;letter-spacing:1px;font-size:.9rem;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:.6rem}
+  .form-submit:hover{background:var(--verde-profundo)}
+  .form-note{font-size:.78rem;color:var(--gris);text-align:center;margin-top:1rem;line-height:1.5}
+  footer{background:var(--verde-profundo);color:rgba(244,239,230,.7);padding:4rem 2rem 2rem}
+  .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(244,239,230,.1)}
+  .footer-brand .footer-logo{margin-bottom:1.2rem}
+  .footer-brand p{font-size:.92rem;line-height:1.7;max-width:380px}
+  .footer-col h4{font-family:var(--serif);color:var(--dorado);font-size:.95rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.2rem}
+  .footer-col ul{list-style:none}
+  .footer-col li{margin-bottom:.7rem;font-size:.92rem}
+  .footer-col a:hover{color:var(--dorado)}
+  .footer-bottom{max-width:1200px;margin:2rem auto 0;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:rgba(244,239,230,.5)}
+  @media (max-width: 968px){
+    .nav-menu{position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:var(--crema);flex-direction:column;justify-content:center;gap:2rem;transition:right .3s;box-shadow:-10px 0 30px rgba(0,0,0,.1)}
+    .nav-menu.active{right:0}
+    .nav-toggle{display:block}
+    .hero-inner{grid-template-columns:1fr;text-align:center;gap:3rem}
+    .hero-visual-logo{max-width:240px;margin:0 auto}
+    .hero-sub{margin-left:auto;margin-right:auto}
+    .hero-actions{justify-content:center}
+    .areas-grid{grid-template-columns:1fr;gap:1.5rem}
+    .about-grid{grid-template-columns:1fr;gap:3rem}
+    .about-visual{max-width:300px;margin:0 auto}
+    .about-stats{gap:1rem}
+    .stat-num{font-size:2rem}
+    .enfoque-grid{grid-template-columns:1fr;gap:1.5rem}
+    .contacto-grid{grid-template-columns:1fr;gap:2.5rem}
+    .footer-grid{grid-template-columns:1fr;gap:2.5rem}
+    .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+  }
+  @media (max-width: 480px){
+    .nav-inner{padding:1rem 1.5rem}
+    .hero{padding:7rem 1.5rem 3rem}
+    .areas,.about,.enfoque,.contacto{padding:5rem 1.5rem}
+    .contacto-form{padding:2rem}
+    .nav-logo-text{font-size:1rem}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Vértex Legal">
+      <svg viewBox="0 0 60 50"><line x1="10" y1="40" x2="30" y2="10" stroke="#1F3B33" stroke-width="5" stroke-linecap="round"/><line x1="30" y1="10" x2="50" y2="40" stroke="#B89758" stroke-width="5" stroke-linecap="round"/><circle cx="30" cy="8" r="3" fill="#1F3B33"/></svg>
+      <div>
+        <div class="nav-logo-text">VÉRTEX</div>
+        <div class="nav-logo-sub">LEGAL</div>
+      </div>
+    </a>
+    <div class="nav-menu" id="navMenu">
+      <a href="#areas">Áreas</a>
+      <a href="#about">Quiénes somos</a>
+      <a href="#enfoque">Enfoque</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="nav-cta">AGENDA CONSULTA</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Firma boutique · Colombia</div>
+      <h1>El vértice donde el <em>derecho</em> se vuelve solución.</h1>
+      <p class="hero-sub">Somos una firma boutique especializada en derecho tributario, ambiental y administrativo. Acompañamos a personas y empresas desde la asesoría preventiva hasta la defensa contenciosa frente a la administración pública.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">Agenda tu consulta<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#areas" class="btn-secondary">Conoce nuestras áreas</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-logo">
+        <svg viewBox="0 0 100 80"><line x1="20" y1="65" x2="50" y2="15" stroke="#F4EFE6" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="15" x2="80" y2="65" stroke="#B89758" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="12" r="3.5" fill="#F4EFE6"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-head">
+    <div class="section-eyebrow">Áreas de práctica</div>
+    <h2>Tres frentes, una sola firma</h2>
+    <p>Atendemos cada materia en dos modos complementarios: la asesoría preventiva y la defensa contenciosa. Esto permite acompañar al cliente desde el cumplimiento normativo hasta la jurisdicción.</p>
+  </div>
+  <div class="areas-grid">
+    <article class="area-card">
+      <svg class="area-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6v36M14 14h20M10 30c0-4 4-8 4-8s4 4 4 8a4 4 0 01-8 0zM30 30c0-4 4-8 4-8s4 4 4 8a4 4 0 01-8 0z"/></svg>
+      <span class="area-tag">Derecho Tributario</span>
+      <h3>Tributario</h3>
+      <p>Acompañamos al contribuyente desde el cumplimiento de sus obligaciones hasta la defensa contenciosa ante la administración tributaria.</p>
+      <ul class="area-list">
+        <li>Acompañamiento en procesos de fiscalización ante la DIAN</li>
+        <li>Respuesta a requerimientos especiales y pliegos de cargos</li>
+        <li>Recursos de reconsideración en vía gubernativa</li>
+        <li>Nulidad y restablecimiento del derecho ante la JCA</li>
+        <li>Defensa en procesos de cobro coactivo</li>
+      </ul>
+    </article>
+    <article class="area-card">
+      <svg class="area-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6c-8 6-10 16-10 22a10 10 0 0020 0c0-6-2-16-10-22zM24 20v18M20 26l4-4 4 4M18 32l6-2 6 2"/></svg>
+      <span class="area-tag">Derecho Ambiental</span>
+      <h3>Ambiental</h3>
+      <p>Atendemos el ciclo regulatorio del licenciamiento ambiental y la defensa en el régimen sancionatorio ante autoridades competentes.</p>
+      <ul class="area-list">
+        <li>Licencias ambientales ante ANLA y CAR</li>
+        <li>Permisos de vertimientos, emisiones, ocupación de cauces y forestal</li>
+        <li>Diagnóstico Ambiental de Alternativas (DAA) y PMA</li>
+        <li>Defensa bajo la Ley 1333 de 2009</li>
+        <li>Transición energética (Ley 1715 de 2014)</li>
+      </ul>
+    </article>
+    <article class="area-card">
+      <svg class="area-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="32" height="30" rx="2"/><path d="M14 18h20M14 24h20M14 30h14"/><circle cx="36" cy="32" r="3"/></svg>
+      <span class="area-tag">Derecho Administrativo</span>
+      <h3>Administrativo</h3>
+      <p>Asesoramos en la actuación administrativa preventiva y litigamos contra la administración a través de los medios de control del CPACA.</p>
+      <ul class="area-list">
+        <li>Trámites y actuaciones ante entidades públicas</li>
+        <li>Contratación estatal (Ley 80/93, Ley 1150/07)</li>
+        <li>Medios de control del CPACA (Ley 1437 de 2011)</li>
+        <li>Nulidad simple, nulidad y restablecimiento, reparación directa</li>
+        <li>Controversias contractuales con el Estado</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-visual-frame">
+        <svg viewBox="0 0 100 80"><line x1="20" y1="65" x2="50" y2="15" stroke="#F4EFE6" stroke-width="5" stroke-linecap="round"/><line x1="50" y1="15" x2="80" y2="65" stroke="#B89758" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="12" r="3" fill="#F4EFE6"/></svg>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-eyebrow">Quiénes somos</div>
+      <h2>Una firma boutique con <em>vocación técnica</em></h2>
+      <p>Vértex Legal nace de la convicción de que el derecho —cuando se ejerce con rigor— es la herramienta más sólida para anticipar riesgos y construir certezas. Por eso elegimos especializarnos en tres materias donde el cliente requiere acompañamiento técnico profundo: tributario, ambiental y administrativo.</p>
+      <p>Combinamos asesoría preventiva y defensa contenciosa en una misma mirada. Esto significa que el cliente cuenta con un mismo equipo desde la elaboración de un documento técnico hasta la sustentación de un recurso ante la jurisdicción contencioso administrativa.</p>
+      <div class="about-stats">
+        <div><div class="stat-num">3</div><div class="stat-label">Áreas especializadas</div></div>
+        <div><div class="stat-num">2</div><div class="stat-label">Modos de actuación</div></div>
+        <div><div class="stat-num">1</div><div class="stat-label">Mirada técnica</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="enfoque" id="enfoque">
+  <div class="section-head">
+    <div class="section-eyebrow">Nuestro enfoque</div>
+    <h2>Cómo trabajamos</h2>
+    <p>Cada caso recibe el mismo método: diagnóstico técnico riguroso, estrategia documentada y comunicación clara con el cliente en cada etapa del proceso.</p>
+  </div>
+  <div class="enfoque-grid">
+    <div class="enfoque-card"><h3>Asesoría preventiva</h3><p>Revisamos contratos, dictámenes, actuaciones y trámites antes de que existan controversias. El objetivo es reducir el riesgo de litigio y construir soportes que resistan una eventual fiscalización o cuestionamiento.</p></div>
+    <div class="enfoque-card"><h3>Defensa contenciosa</h3><p>Cuando la controversia es inevitable, asumimos la representación con técnica procesal estricta: respuesta a requerimientos, recursos en vía gubernativa, demandas ante la jurisdicción contencioso administrativa y defensa en procesos sancionatorios.</p></div>
+    <div class="enfoque-card"><h3>Continuidad del equipo</h3><p>El mismo equipo que asesora preventivamente es el que defiende contenciosamente. Esto evita pérdida de información, retrabajo y vacíos estratégicos cuando el caso escala a sede judicial.</p></div>
+    <div class="enfoque-card"><h3>Comunicación transparente</h3><p>Documentamos cada actuación, explicamos las opciones procesales en lenguaje claro y entregamos al cliente la información necesaria para tomar decisiones informadas. Sin promesas de resultado.</p></div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="contacto-grid">
+    <div class="contacto-info">
+      <div class="section-eyebrow">Contacto</div>
+      <h2>Conversemos sobre tu caso</h2>
+      <p>Si recibiste un requerimiento, una resolución sancionatoria, o necesitas acompañamiento en un trámite ante la administración, escríbenos. La primera conversación es siempre confidencial.</p>
+      <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div><div><div class="contacto-item-label">Correo</div><div class="contacto-item-value">stefa.bedoya@vertexlegal.com.co</div></div></div>
+      <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contacto-item-label">Ubicación</div><div class="contacto-item-value">Colombia</div></div></div>
+      <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="contacto-item-label">Horario</div><div class="contacto-item-value">Lunes a viernes · 8:00 a.m. – 6:00 p.m.</div></div></div>
+    </div>
+    <form class="contacto-form" id="contactForm" onsubmit="enviarConsulta(event)">
+      <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" required /></div>
+      <div class="form-group"><label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" required /></div>
+      <div class="form-group"><label for="area">Área de interés</label><select id="area" name="area" required><option value="">Selecciona un área</option><option value="Tributario">Derecho Tributario</option><option value="Ambiental">Derecho Ambiental</option><option value="Administrativo">Derecho Administrativo</option><option value="Otro">Otro / consulta general</option></select></div>
+      <div class="form-group"><label for="mensaje">Cuéntanos sobre tu caso</label><textarea id="mensaje" name="mensaje" required></textarea></div>
+      <button type="submit" class="form-submit">Enviar consulta<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="form-note">Tu información se envía directamente a nuestro correo. No almacenamos datos en este sitio.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo nav-logo">
+        <svg viewBox="0 0 60 50"><line x1="10" y1="40" x2="30" y2="10" stroke="#F4EFE6" stroke-width="5" stroke-linecap="round"/><line x1="30" y1="10" x2="50" y2="40" stroke="#B89758" stroke-width="5" stroke-linecap="round"/><circle cx="30" cy="8" r="3" fill="#F4EFE6"/></svg>
+        <div><div class="nav-logo-text" style="color:var(--crema)">VÉRTEX</div><div class="nav-logo-sub">LEGAL</div></div>
+      </div>
+      <p>Firma boutique especializada en derecho tributario, ambiental y administrativo. Asesoría y defensa frente a la administración pública en Colombia.</p>
+    </div>
+    <div class="footer-col"><h4>Áreas</h4><ul><li><a href="#areas">Derecho Tributario</a></li><li><a href="#areas">Derecho Ambiental</a></li><li><a href="#areas">Derecho Administrativo</a></li></ul></div>
+    <div class="footer-col"><h4>Firma</h4><ul><li><a href="#about">Quiénes somos</a></li><li><a href="#enfoque">Enfoque</a></li><li><a href="#contacto">Contacto</a></li><li><a href="https://instagram.com/vertexlegal" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><div>© 2026 Vértex Legal · Abogados. Todos los derechos reservados.</div><div>Publicidad jurídica conforme a la Ley 1123 de 2007.</div></div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  navToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+  document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('active')));
+  function enviarConsulta(event){
+    event.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const area = document.getElementById('area').value;
+    const mensaje = document.getElementById('mensaje').value;
+    const asunto = encodeURIComponent(`Consulta web · ${area} · ${nombre}`);
+    const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${correo}\nÁrea de interés: ${area}\n\nMensaje:\n${mensaje}`);
+    window.location.href = `mailto:stefa.bedoya@vertexlegal.com.co?subject=${asunto}&body=${cuerpo}`;
+  }
+</script>
+
+</body>
+</html>
