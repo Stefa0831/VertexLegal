@@ -276,13 +276,22 @@
       <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contacto-item-label">Ubicación</div><div class="contacto-item-value">Colombia</div></div></div>
       <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="contacto-item-label">Horario</div><div class="contacto-item-value">Lunes a viernes · 8:00 a.m. – 6:00 p.m.</div></div></div>
     </div>
-    <form class="contacto-form" id="contactForm" onsubmit="enviarConsulta(event)">
-      <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" required /></div>
-      <div class="form-group"><label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" required /></div>
-      <div class="form-group"><label for="area">Área de interés</label><select id="area" name="area" required><option value="">Selecciona un área</option><option value="Tributario">Derecho Tributario</option><option value="Ambiental">Derecho Ambiental</option><option value="Administrativo">Derecho Administrativo</option><option value="Otro">Otro / consulta general</option></select></div>
-      <div class="form-group"><label for="mensaje">Cuéntanos sobre tu caso</label><textarea id="mensaje" name="mensaje" required></textarea></div>
+    <form class="contacto-form" id="contactForm"
+          action="https://formsubmit.co/stefa.bedoya@vertexlegal.com.co"
+          method="POST">
+      <!-- Configuración FormSubmit -->
+      <input type="hidden" name="_subject" value="Nueva consulta desde vertexlegal.com.co">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_autoresponse" value="Gracias por escribir a Vértex Legal. Hemos recibido tu consulta y te responderemos en un plazo de 24 horas hábiles. Un saludo, el equipo de Vértex Legal.">
+      <input type="hidden" name="_next" value="https://www.vertexlegal.com.co/#contacto">
+
+      <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="Nombre" required /></div>
+      <div class="form-group"><label for="email">Correo electrónico</label><input type="email" id="email" name="email" required /></div>
+      <div class="form-group"><label for="area">Área de interés</label><select id="area" name="Area de interes" required><option value="">Selecciona un área</option><option value="Tributario">Derecho Tributario</option><option value="Ambiental">Derecho Ambiental</option><option value="Administrativo">Derecho Administrativo</option><option value="Otro">Otro / consulta general</option></select></div>
+      <div class="form-group"><label for="mensaje">Cuéntanos sobre tu caso</label><textarea id="mensaje" name="Mensaje" required></textarea></div>
       <button type="submit" class="form-submit">Enviar consulta<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <p class="form-note">Tu información se envía directamente a nuestro correo. No almacenamos datos en este sitio.</p>
+      <p class="form-note">Tu información llega directamente al correo del despacho. La primera conversación es confidencial.</p>
     </form>
   </div>
 </section>
@@ -307,16 +316,6 @@
   const navMenu = document.getElementById('navMenu');
   navToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
   document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('active')));
-  function enviarConsulta(event){
-    event.preventDefault();
-    const nombre = document.getElementById('nombre').value;
-    const correo = document.getElementById('correo').value;
-    const area = document.getElementById('area').value;
-    const mensaje = document.getElementById('mensaje').value;
-    const asunto = encodeURIComponent(`Consulta web · ${area} · ${nombre}`);
-    const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${correo}\nÁrea de interés: ${area}\n\nMensaje:\n${mensaje}`);
-    window.location.href = `mailto:stefa.bedoya@vertexlegal.com.co?subject=${asunto}&body=${cuerpo}`;
-  }
 </script>
 
 </body>
