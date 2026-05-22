@@ -29,10 +29,10 @@
   .nav-logo-text{font-family:var(--serif);font-weight:700;font-size:1.15rem;letter-spacing:2px;color:var(--verde)}
   .nav-logo-sub{font-family:var(--sans);font-size:.65rem;letter-spacing:4px;font-weight:500;color:var(--dorado);margin-top:-2px}
   .nav-menu{display:flex;gap:2.2rem;align-items:center}
-  .nav-menu a{font-size:.92rem;font-weight:500;letter-spacing:.5px;color:var(--verde);transition:color .2s}
-  .nav-menu a:hover{color:var(--dorado)}
-  .nav-cta{padding:.65rem 1.4rem;background:var(--verde);color:var(--crema);border-radius:50px;font-size:.85rem;font-weight:600;letter-spacing:1px;transition:all .2s}
-  .nav-cta:hover{background:var(--verde-profundo);color:var(--crema)}
+  .nav-menu a:not(.nav-cta){font-size:.92rem;font-weight:500;letter-spacing:.5px;color:var(--verde);transition:color .2s}
+  .nav-menu a:not(.nav-cta):hover{color:var(--dorado)}
+  .nav-menu a.nav-cta{padding:.7rem 1.6rem;background:var(--verde);color:var(--crema) !important;border-radius:50px;font-size:.85rem;font-weight:700;letter-spacing:1.5px;transition:all .25s}
+  .nav-menu a.nav-cta:hover{background:var(--dorado);color:var(--verde-profundo) !important;transform:translateY(-1px)}
   .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.5rem}
   .nav-toggle span{display:block;width:24px;height:2px;background:var(--verde);margin:5px 0;transition:all .3s}
   .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg, var(--verde-profundo) 0%, var(--verde) 100%);color:var(--crema);position:relative;overflow:hidden;padding:8rem 2rem 4rem}
@@ -321,4 +321,3 @@
 
 </body>
 </html>
-
