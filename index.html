@@ -275,6 +275,16 @@
   .area-card p.area-col-nota{margin-top:auto}
   @media (min-width: 969px){.area-card p.area-col-nota{box-sizing:content-box;min-height:4.8em}}
   @media (max-width: 968px){.area-card.area-destacada > p{font-size:1rem}.area-card.area-destacada > p.area-nota{font-size:1rem;padding:1.1rem 1.2rem}}
+  .form-consent{display:flex;gap:.7rem;align-items:flex-start;margin:0 0 1.3rem;font-size:.82rem;line-height:1.5;color:#4A4F52;cursor:pointer}
+  .form-consent input{flex:none;width:18px;height:18px;margin-top:.15rem;accent-color:var(--verde)}
+  a.contacto-wa{text-decoration:none;color:inherit}
+  a.contacto-wa:hover .contacto-item-value{color:var(--dorado-texto,#A07E3F)}
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:900;display:flex;align-items:center;gap:.55rem;padding:.85rem 1.25rem .85rem 1rem;background:var(--verde);color:var(--crema);border-radius:999px;font-family:var(--sans);font-size:.9rem;font-weight:600;letter-spacing:.3px;text-decoration:none;box-shadow:0 10px 28px rgba(15,42,35,.28);border:1px solid rgba(184,151,88,.55);transition:transform .2s,box-shadow .2s}
+  .wa-float svg{width:22px;height:22px;color:var(--dorado)}
+  .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(15,42,35,.34)}
+  .wa-float:focus-visible{outline:3px solid var(--dorado);outline-offset:3px}
+  .wa-corto{display:none}
+  @media (max-width: 600px){.wa-float{right:14px;bottom:14px;padding:.8rem 1.05rem .8rem .9rem}.wa-largo{display:none}.wa-corto{display:inline}}
 </style>
 </head>
 <body>
@@ -361,19 +371,19 @@
             <li><div>Impuesto predial
               <ul class="area-sublist">
                 <li>Avalúo catastral y base gravable</li>
-                <li>Tarifas, exenciones y exclusiones</li>
+                <li>Tarifas, exenciones, exclusiones y no sujeciones</li>
               </ul></div></li>
             <li><div>Demás tributos municipales
               <ul class="area-sublist">
                 <li>Alumbrado público y delineación urbana</li>
-                <li>Publicidad exterior y estampillas</li>
+                <li>Publicidad exterior visual y estampillas</li>
               </ul></div></li>
           </ul>
           <div class="area-grupo">En los departamentos</div>
           <ul class="area-list">
             <li><div>Impuesto sobre vehículos automotores
               <ul class="area-sublist">
-                <li>Base gravable y avalúo del vehículo</li>
+                <li>Base gravable y valor comercial del vehículo</li>
                 <li>Vehículos vendidos sin traspaso</li>
                 <li>Cobros de vigencias anteriores y prescripción</li>
               </ul></div></li>
@@ -392,12 +402,12 @@
             <li><div>Procesos de fiscalización
               <ul class="area-sublist">
                 <li>Requerimientos ordinarios y especiales</li>
-                <li>Emplazamientos para declarar o corregir</li>
+                <li>Emplazamientos para corregir y por no declarar</li>
                 <li>Pliegos de cargos</li>
               </ul></div></li>
             <li><div>Liquidaciones oficiales y sanciones
               <ul class="area-sublist">
-                <li>Recursos de reconsideración en vía gubernativa</li>
+                <li>Recurso de reconsideración</li>
               </ul></div></li>
           </ul>
           <div class="area-grupo">En el cobro</div>
@@ -405,7 +415,7 @@
             <li><div>Procesos de cobro coactivo
               <ul class="area-sublist">
                 <li>Excepciones contra el mandamiento de pago</li>
-                <li>Levantamiento de medidas cautelares y embargos</li>
+                <li>Levantamiento de embargos y demás medidas cautelares</li>
                 <li>Prescripción de la acción de cobro</li>
               </ul></div></li>
             <li><div>Acuerdos de pago
@@ -417,7 +427,7 @@
           <p class="area-col-nota">Acompañamos al contribuyente en cada etapa, desde el primer requerimiento de la DIAN hasta el cierre del cobro coactivo o el cumplimiento del acuerdo de pago.</p>
         </div>
       </div>
-      <p class="area-nota">En ambos frentes llevamos el caso, cuando hace falta, hasta la jurisdicción contencioso administrativa, mediante la nulidad y restablecimiento del derecho.</p>
+      <p class="area-nota">En ambos frentes llevamos el caso, cuando hace falta, hasta la jurisdicción de lo contencioso administrativo, mediante la nulidad y restablecimiento del derecho.</p>
     </article>
     <article class="area-card area-destacada">
       <svg class="area-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="32" height="30" rx="2"/><path d="M14 18h20M14 24h20M14 30h14"/><circle cx="36" cy="32" r="3"/></svg>
@@ -427,7 +437,7 @@
       <div class="area-cols">
         <div class="area-col">
           <h4>Ante el Juez</h4>
-          <div class="area-sub">Jurisdicción contencioso administrativa</div>
+          <div class="area-sub">Jurisdicción de lo contencioso administrativo</div>
           <ul class="area-list">
             <li>Nulidad simple y nulidad y restablecimiento del derecho</li>
             <li>Reparación directa</li>
@@ -447,7 +457,7 @@
   </div>
   <div class="areas-cta">
     <div>
-      <h3>Tu problema con la Administración tiene <em>respuesta</em></h3>
+      <h3>Tu problema con la Administración merece una <em>defensa técnica</em></h3>
       <p>Requerimientos, liquidaciones, sanciones y cobros, en derecho tributario y en derecho administrativo, son nuestro trabajo de todos los días.</p>
     </div>
     <a href="#contacto" class="btn-primary">Cuéntanos tu caso</a>
@@ -465,7 +475,7 @@
       <div class="section-eyebrow">Quiénes somos</div>
       <h2>Una firma boutique con <em>vocación de litigio</em></h2>
       <p>Node Legal nace de la convicción de que el derecho, cuando se ejerce con rigor, es la herramienta más sólida para resolver un conflicto con la Administración; por eso elegimos especializarnos en derecho tributario y derecho administrativo, dos materias en las que el cliente necesita una defensa técnica y profunda.</p>
-      <p>Nuestro fuerte está en actuar cuando el problema ya llegó, es decir, cuando hay un requerimiento por responder, una liquidación o una sanción por discutir, o un cobro por enfrentar, y desde ahí construimos la salida; a quien prefiere anticiparse también lo acompañamos, con el mismo equipo y el mismo rigor.</p>
+      <p>Nuestro fuerte está en actuar cuando el problema ya llegó, es decir, cuando hay un requerimiento por responder, una liquidación o una sanción por discutir, o un cobro por enfrentar, y desde ahí construimos la estrategia de defensa; a quien prefiere anticiparse también lo acompañamos, con el mismo equipo y el mismo rigor.</p>
       <div class="about-pasos-titulo">Así actuamos cuando el problema ya existe</div>
       <div class="about-stats">
         <div><div class="stat-num">1</div><div class="stat-label">Respondemos el requerimiento</div></div>
@@ -483,10 +493,10 @@
     <p>Cada caso recibe el mismo método, que combina diagnóstico técnico riguroso, estrategia documentada y comunicación clara con el cliente en cada etapa del proceso.</p>
   </div>
   <div class="enfoque-grid">
-    <div class="enfoque-card"><h3>Defensa contenciosa</h3><p>Cuando la Administración ya actuó, asumimos la representación con técnica procesal estricta, lo que comprende la respuesta a requerimientos, los recursos en vía gubernativa, las demandas ante la jurisdicción contencioso administrativa y la defensa en procesos sancionatorios.</p></div>
+    <div class="enfoque-card"><h3>Defensa contenciosa</h3><p>Cuando la Administración ya actuó, asumimos la representación con técnica procesal estricta, lo que comprende la respuesta a requerimientos, los recursos en sede administrativa, las demandas ante la jurisdicción de lo contencioso administrativo y la defensa en procesos sancionatorios.</p></div>
     <div class="enfoque-card"><h3>Continuidad del equipo</h3><p>El equipo que recibe el caso es el mismo que lo lleva hasta el final, tanto ante la Administración como ante el Juez, lo cual evita pérdida de información, reprocesos y vacíos estratégicos.</p></div>
     <div class="enfoque-card"><h3>Comunicación transparente</h3><p>Documentamos cada actuación, explicamos las opciones procesales en lenguaje claro y entregamos al cliente la información necesaria para tomar decisiones informadas, sin promesas de resultado.</p></div>
-    <div class="enfoque-card"><h3>Asesoría preventiva</h3><p>A quien prefiere anticiparse le revisamos contratos, actuaciones y trámites antes de que exista una controversia, con el objetivo de reducir el riesgo de litigio y construir soportes que resistan una eventual fiscalización.</p></div>
+    <div class="enfoque-card"><h3>Asesoría preventiva</h3><p>A quien prefiere anticiparse le revisamos contratos, actuaciones y trámites antes de que exista una controversia, con el objetivo de reducir el riesgo de litigio y construir soportes preparados para una eventual fiscalización.</p></div>
   </div>
 </section>
 
@@ -495,8 +505,10 @@
     <div class="contacto-info">
       <div class="section-eyebrow">Contacto</div>
       <h2>¿Ya te llegó el requerimiento? Aquí empieza tu <em>defensa</em></h2>
-      <p>En derecho tributario y en derecho administrativo recibimos el caso en el punto en que esté, lo estudiamos y lo llevamos hasta donde haga falta; escríbenos, que la primera conversación es siempre confidencial.</p>
+      <p>En derecho tributario y en derecho administrativo recibimos el caso en el punto en que esté, lo estudiamos y lo llevamos hasta donde haga falta; escríbenos, que todo lo que nos cuentes queda amparado por el secreto profesional.</p>
       <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div><div><div class="contacto-item-label">Correo</div><div class="contacto-item-value">stefa.bedoya@nodelegal.co</div></div></div>
+      <a class="contacto-item contacto-wa" href="https://wa.me/573008821747?text=Hola%2C%20escribo%20desde%20la%20p%C3%A1gina%20de%20Node%20Legal%20porque%20quiero%20consultar%20un%20caso." target="_blank" rel="noopener"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.5A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg></div><div><div class="contacto-item-label">WhatsApp</div><div class="contacto-item-value">+57 300 882 1747</div></div></a>
+      <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V4h9v17M15 9h3v12M9 8h3M9 12h3M9 16h3"/></svg></div><div><div class="contacto-item-label">Oficina</div><div class="contacto-item-value">Milla de Oro Distrito de Negocios, El Poblado, Medellín</div></div></div>
       <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contacto-item-label">Cobertura</div><div class="contacto-item-value">Atendemos tu caso en cualquier municipio de Colombia</div></div></div>
       <div class="contacto-item"><div class="contacto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="contacto-item-label">Horario</div><div class="contacto-item-value">Lunes a viernes · 8:00 a.m. – 6:00 p.m.</div></div></div>
     </div>
@@ -507,15 +519,16 @@
       <input type="hidden" name="_subject" value="Nueva consulta desde nodelegal.co">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="true">
-      <input type="hidden" name="_autoresponse" value="Gracias por escribir a Node Legal; hemos recibido tu consulta y te responderemos en un plazo de 24 horas hábiles. Un saludo, el equipo de Node Legal.">
+      <input type="hidden" name="_autoresponse" value="Gracias por escribir a Node Legal; hemos recibido tu consulta y te responderemos en un plazo de un día hábil. Un saludo, el equipo de Node Legal.">
       <input type="hidden" name="_next" value="https://www.nodelegal.co/#contacto">
 
       <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="Nombre" required /></div>
       <div class="form-group"><label for="email">Correo electrónico</label><input type="email" id="email" name="email" required /></div>
       <div class="form-group"><label for="area">Área de interés</label><select id="area" name="Area de interes" required><option value="">Selecciona un área</option><option value="Tributario">Derecho Tributario</option><option value="Administrativo">Derecho Administrativo</option><option value="Otro">Otro / consulta general</option></select></div>
       <div class="form-group"><label for="mensaje">Cuéntanos sobre tu caso</label><textarea id="mensaje" name="Mensaje" required></textarea></div>
+      <label class="form-consent"><input type="checkbox" name="Autorizacion de datos" value="Autorizo" required /><span>Autorizo a Node Legal S.A.S. a tratar mis datos personales con el único fin de atender esta consulta, conforme a la Ley 1581 de 2012.</span></label>
       <button type="submit" class="form-submit">Enviar consulta<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <p class="form-note">Tu información llega directamente al correo del despacho y la primera conversación es confidencial.</p>
+      <p class="form-note">Tu consulta llega al correo del despacho y queda amparada por el secreto profesional.</p>
     </form>
   </div>
 </section>
@@ -532,8 +545,10 @@
     <div class="footer-col"><h4>Áreas</h4><ul><li><a href="#areas">Derecho Tributario</a></li><li><a href="#areas">Derecho Administrativo</a></li></ul></div>
     <div class="footer-col"><h4>Firma</h4><ul><li><a href="#porque">¿Por qué Node?</a></li><li><a href="#about">Quiénes somos</a></li><li><a href="#enfoque">Enfoque</a></li><li><a href="#contacto">Contacto</a></li><li><a href="https://instagram.com/nodelegal.co" target="_blank" rel="noopener">Instagram</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><div>© 2026 Node Legal · Abogados. Todos los derechos reservados.</div><div>Publicidad jurídica conforme a la Ley 1123 de 2007.</div></div>
+  <div class="footer-bottom"><div>© 2026 Node Legal · Abogados. Todos los derechos reservados.</div></div>
 </footer>
+<a class="wa-float" href="https://wa.me/573008821747?text=Hola%2C%20escribo%20desde%20la%20p%C3%A1gina%20de%20Node%20Legal%20porque%20quiero%20consultar%20un%20caso." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-3.9-.9L3 21l1.9-5.5A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg><span class="wa-largo">Escríbenos por WhatsApp</span><span class="wa-corto">Escríbenos</span></a>
+
 
 <script>
   const navToggle = document.getElementById('navToggle');
